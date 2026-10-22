@@ -1,126 +1,114 @@
-Portfolio Testera Manualnego QA:
+# Portfolio QA — Testowanie Manualne i Game QA
 
 Witaj w moim portfolio testowania manualnego oprogramowania!
 
-Repozytorium dokumentuje moją praktyczną naukę i rozwój umiejętności w zakresie testowania manualnego, ze szczególnym uwzględnieniem testowania gier, testów funkcjonalnych, projektowania przypadków testowych oraz zgłaszania błędów.
+Repozytorium prezentuje moje praktyczne doświadczenia związane z testowaniem funkcjonalnym gier, projektowaniem przypadków testowych, dokumentowaniem wyników oraz analizowaniem zaobserwowanych nieprawidłowości.
 
-O mnie:
+## O mnie
 
-Rozwijam się w kierunku Junior QA Tester. Ukończyłam roczne szkolenie Game Design - projektowanie i testowanie gier, podczas którego zdobyłam praktyczne doświadczenie w pracy z Unity, Unreal Engine oraz skryptami C#.
+Rozwijam się w kierunku **Junior QA Tester / Manual Tester / Game QA**.
 
-Posiadam doświadczenie w realizacji projektów technicznych oraz korzystaniu z Git i GitHub.
+Ukończyłam roczne kształcenie w zakresie Game Design, podczas którego pracowałam z silnikami Unity i Unreal Engine oraz rozwijałam podstawy programowania w C#.
 
-Obecnie rozwijam umiejętności związane z testowaniem manualnym, przygotowywaniem dokumentacji testowej, raportowaniem błędów oraz obsługą narzędzia Jira.
+Obecnie doskonalę umiejętności testowania manualnego, przygotowywania dokumentacji testowej, pracy z Jira oraz wykorzystywania GitHub do prezentacji projektów.
 
-Projekt 1: SpaceShooter - testowanie manualne gry
+## Projekt 1 — SpaceShooter
 
-Testowana aplikacja: SpaceShooter - gra stworzona w Unity
+**Testowana aplikacja:** SpaceShooter — gra stworzona w Unity
 
-Środowisko testowe: Windows, Unity Editor 2022.3.51f1
+**Środowisko:** Windows, Unity Editor 2022.3.51f1
 
-Rodzaj testów: Testowanie manualne i funkcjonalne
+**Rodzaj testów:** Manualne testy funkcjonalne
 
-Wykorzystane narzędzia: Unity, Jira, GitHub
+**Narzędzia:** Unity, Unity Inspector, Jira, GitHub
 
-Data testowania: 22.10.2026
+**Data testowania:** 22 października 2026 r.
 
-Repozytorium gry: https://github.com/mrsprimr0se/SpaceShooter
+**Kod źródłowy gry:** [SpaceShooter — GitHub](https://github.com/mrsprimr0se/SpaceShooter)
 
-Zakres przeprowadzonych testów
+### Cel testowania
 
-W ramach testowania sprawdziłam następujące funkcjonalności:
+Sprawdzenie poprawności działania wybranych podstawowych funkcjonalności gry oraz udokumentowanie przebiegu i wyników testów.
 
-- Uruchamianie rozgrywki z menu głównego.
-- Sterowanie postacią - poruszanie się w lewo i prawo.
-- Mechanikę wystrzeliwania pocisków.
-- Wstrzymywanie rozgrywki klawiszem ESC.
-- Wznawianie rozgrywki klawiszem ESC.
-- Naliczanie punktów po trafieniu przeciwnika.
-- Wznawianie rozgrywki za pomocą przycisku Resume.
+### Przypadki testowe i wyniki
 
-Wyniki wykonanych testów
+| ID | Scenariusz testowy | Wynik |
+|---|---|---|
+| [TC-001](Test-Cases/TC-001_Uruchomienie_rozgrywki.md) | Uruchomienie rozgrywki z menu głównego | PASS |
+| [TC-002](Test-Cases/TC-002_Poruszanie_statkiem.md) | Poruszanie statkiem w lewo i prawo | PASS |
+| [TC-003](Test-Cases/TC-003_Wystrzeliwanie_pociskow.md) | Wystrzeliwanie pocisków | PASS |
+| [TC-004](Test-Cases/TC-004_Wstrzymanie_rozgrywki.md) | Wstrzymanie rozgrywki klawiszem ESC | PASS |
+| [TC-005](Test-Cases/TC-005_Wznowienie_rozgrywki_ESC.md) | Wznowienie rozgrywki klawiszem ESC | PASS |
+| [TC-006](Test-Cases/TC-006_Naliczanie_punktow.md) | Naliczanie punktów po trafieniu przeciwnika | PASS |
+| [TC-007](Test-Cases/TC-007_Wznowienie_przyciskiem_Resume.md) | Wznowienie rozgrywki przyciskiem Resume | PASS |
 
-| ID testu | Scenariusz testowy | Wynik |
+### Podsumowanie wyników
 
-- TC-001: Uruchomienie rozgrywki z menu głównego- PASS
-- TC-002: Poruszanie postacią w lewo i prawo- PASS
-- TC-003: Wystrzeliwanie pocisków- PASS
-- TC-004: Wstrzymanie rozgrywki klawiszem ESC- PASS
-- TC-005: Wznowienie rozgrywki klawiszem ESC- PASS
-- TC-006: Naliczanie punktów po trafieniu przeciwnika- PASS
-- TC-007: Wznowienie rozgrywki przyciskiem Resume- PASS
+- **Wykonane testy:** 7
+- **PASS:** 7
+- **FAIL:** 0
+- **Potwierdzone błędy w testowanym zakresie:** 0
 
-Podsumowanie testów
+Wszystkie siedem wykonanych przypadków testowych zakończyło się wynikiem PASS.
 
-- Liczba wykonanych przypadków testowych: 7
-- Testy zakończone sukcesem (PASS): 7
-- Testy niezaliczone (FAIL): 0
-- Potwierdzone błędy w sprawdzonych scenariuszach: 0
+Brak wykrytych błędów dotyczy wyłącznie sprawdzonych scenariuszy i nie oznacza, że cała aplikacja jest wolna od usterek.
 
-Wszystkie wykonane przypadki testowe zakończyły się wynikiem zgodnym z oczekiwaniami w zakresie przeprowadzonych czynności.
+### Raport końcowy
 
-Analiza nieoczekiwanego zachowania - TC-006
+[Otwórz raport z testowania SpaceShooter](Test-Reports/SpaceShooter_Test_Summary_Report.md)
 
-Podczas testowania mechanizmu naliczania punktów zaobserwowałam rozbieżność pomiędzy domyślną wartością punktów określoną w skrypcie C# a rzeczywistym przyrostem punktacji w grze.
+Raport zawiera zakres testów, środowisko, wyniki, ograniczenia testowania, dodatkową analizę oraz wnioski końcowe.
 
-Zaobserwowane zachowanie:
-- Początkowy wynik wynosił 1 punkt.
-- Po trafieniu przeciwnika wynik zwiększył się do 2 punktów.
-- Rzeczywisty przyrost wynosił 1 punkt, podczas gdy w kodzie C# znajdowała się domyślna wartość 10 punktów.
+## Analiza QA — TC-006
 
-Podjęte działania:
+Podczas weryfikacji mechaniki naliczania punktów zauważyłam różnicę między domyślną wartością punktów w skrypcie C# a wynikiem obserwowanym podczas rozgrywki.
 
-1. Przeanalizowałam zaobserwowaną rozbieżność.
-2. Sprawdziłam konfigurację obiektu Player w Unity Inspector.
-3. Zweryfikowałam przypisany prefab Bullet.
-4. Ustaliłam, że w komponencie Bullet Controller ustawiono wartość `Points = 1`.
-5. Porównałam konfigurację obiektu z rzeczywistym wynikiem testu.
+**Zaobserwowane zachowanie:**
 
-Wniosek:
+- Wynik wzrósł z 1 do 2 punktów.
+- W skrypcie `BulletController.cs` znajdowała się domyślna wartość `points = 10`.
+- W Unity Inspector używany prefab Bullet miał ustawienie `Points = 1`.
 
-Gra naliczała punkty zgodnie z konfiguracją prefabu Bullet. Zaobserwowane zachowanie było prawidłowe i nie wymagało utworzenia zgłoszenia błędu.
+**Podjęte działania:**
 
-Ostateczny wynik TC-006: PASS.
+1. Sprawdziłam konfigurację obiektu Player.
+2. Zweryfikowałam prefab Bullet przypisany do gracza.
+3. Porównałam ustawienia prefabu z rzeczywistym zachowaniem gry.
 
-Dokumentacja testowa
+**Wniosek:** Gra naliczała punkty zgodnie z konfiguracją prefabu. Nie potwierdzono błędu.
 
-Przypadki testowe, przebieg testowania oraz wyniki zostały udokumentowane w narzędziu Jira.
+**Wynik TC-006: PASS.**
 
-Dokumentacja obejmuje:
+### Materiały dowodowe
 
-- Przypadki testowe (Test Cases).
-- Warunki wstępne (Preconditions).
-- Kroki testowe (Test Steps).
-- Oczekiwane rezultaty (Expected Results).
-- Rzeczywiste rezultaty (Actual Results).
-- Statusy wykonania testów (PASS/FAIL).
-- Materiały dowodowe (Test Evidence).
+- [TC-006 — przypisanie prefabu Bullet do obiektu Player](Test-Evidence/TC-006_Player_BulletPrefab.png)
+- [TC-006 — konfiguracja Points = 1](Test-Evidence/TC-006_Bullet_Points1.png)
+- [Folder z materiałami dowodowymi](Test-Evidence/README.md)
 
-Do dokumentacji testowej dołączono nagrania rozgrywki oraz zrzuty ekranu z Unity Inspector.
+## Dokumentacja projektu
 
-Zdobywane i rozwijane umiejętności
+W repozytorium znajdują się trzy główne foldery:
 
-- Testowanie manualne oprogramowania.
-- Testowanie funkcjonalne gier.
-- Projektowanie i wykonywanie przypadków testowych.
+- **[Test-Cases](Test-Cases/)** — szczegółowe przypadki testowe z krokami, oczekiwanymi i rzeczywistymi rezultatami.
+- **[Test-Reports](Test-Reports/)** — raport podsumowujący przeprowadzone testy.
+- **[Test-Evidence](Test-Evidence/)** — materiały dowodowe z testowania w Unity.
+
+Dodatkowa dokumentacja testowa oraz nagranie rozgrywki zostały zapisane w Jira.
+
+## Umiejętności prezentowane w projekcie
+
+- Projektowanie i wykonywanie testów funkcjonalnych.
+- Tworzenie przypadków testowych (Test Cases).
+- Dokumentowanie wyników testów.
 - Analiza oczekiwanych i rzeczywistych rezultatów.
-- Dokumentowanie wyników testowania.
-- Podstawy raportowania błędów.
-- Obsługa Jira.
-- Analiza nieprawidłowości i weryfikacja konfiguracji aplikacji.
-- Testowanie aplikacji w środowisku Unity.
-- Wykorzystanie GitHub do dokumentowania projektów.
+- Weryfikowanie konfiguracji aplikacji w Unity Inspector.
+- Rozpoznawanie różnicy między błędem a prawidłowym zachowaniem aplikacji.
+- Korzystanie z Jira i GitHub.
 
-Dalszy rozwój portfolio
+## Dalszy rozwój
 
-Planuję rozwijać repozytorium poprzez:
+Planuję rozbudowywać portfolio o kolejne scenariusze testowe, rzeczywiście wykryte błędy, raporty QA oraz projekty związane z testowaniem API i podstawami SQL.
 
-- Rozszerzanie zakresu testów funkcjonalnych.
-- Przygotowywanie dodatkowych przypadków testowych.
-- Dokumentowanie rzeczywiście wykrytych błędów.
-- Tworzenie raportów z przebiegu testowania.
-- Doskonalenie umiejętności pracy z Jira.
-- Naukę testowania REST API przy użyciu Postmana.
-- Rozwijanie podstaw SQL przydatnych w testowaniu oprogramowania.
+---
 
-Cel portfolio: praktyczne dokumentowanie rozwoju kompetencji testerskich i przygotowanie do rozpoczęcia kariery zawodowej jako Junior QA Tester / Manual Tester / Game QA.
+**Cel portfolio:** przedstawienie praktycznych umiejętności i dokumentowanie rozwoju w kierunku Junior QA Tester / Manual Tester / Game QA.
